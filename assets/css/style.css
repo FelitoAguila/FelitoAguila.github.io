@@ -1232,6 +1232,17 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
+.form-success {
+  margin-top: 1rem;
+  color: #4caf50;
+  font-size: 0.95rem;
+}
+
+.form-error {
+  margin-top: 1rem;
+  color: #f44336;
+  font-size: 0.95rem;
+}
 
 
 

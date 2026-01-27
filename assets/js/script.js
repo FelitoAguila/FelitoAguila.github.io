@@ -134,6 +134,49 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // ⛔ evita salir de la página
+
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      "Accept": "application/json"
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      form.reset();
+      formBtn.setAttribute("disabled", "");
+      showSuccessMessage();
+    } else {
+      showErrorMessage();
+    }
+  })
+  .catch(() => {
+    showErrorMessage();
+  });
+});
+
+function showSuccessMessage() {
+  const message = document.createElement("p");
+  message.className = "form-success";
+  message.textContent = "Thanks for your message! I’ll get back to you soon 🙂";
+
+  form.appendChild(message);
+}
+
+function showErrorMessage() {
+  const message = document.createElement("p");
+  message.className = "form-error";
+  message.textContent = "Oops! Something went wrong. Please try again.";
+
+  form.appendChild(message);
+}
+
+
 
 
 // page navigation variables
