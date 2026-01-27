@@ -80,7 +80,9 @@
             </div>
             <div class="contact-info">
               <p class="contact-title">Email</p>
-              <a href="mailto:feloaguila@gmail.com" class="contact-link">feloaguila@gmail.com</a>
+              <a href="mailto:feloaguila@gmail.com" class="contact-link">
+                feloaguila@gmail.com
+              </a>
             </div>
           </li>
 
@@ -90,8 +92,14 @@
               <ion-icon name="logo-linkedin"></ion-icon>
             </div>
             <div class="contact-info">
-              <p class="contact-title">LinkedIn</p>
-              <a href="https://www.linkedin.com/in/felix-aguila/" class="contact-link">www.linkedin.com/in/felix-aguila</a>
+              <a 
+                href="https://www.linkedin.com/in/felix-aguila/" 
+                class="contact-link"
+                target="_blank"
+                rel = "noopener noreferref"
+              >
+                <p class="contact-title">LinkedIn</p>
+              </a>
             </div>
           </li>
 
@@ -101,8 +109,14 @@
               <ion-icon name="logo-github"></ion-icon>
             </div>
             <div class="contact-info">
-              <p class="contact-title">GitHub</p>
-              <a href="https://github.com/FelitoAguila" class="contact-link">github.com/FelitoAguila</a>
+              <a 
+                href="https://github.com/FelitoAguila" 
+                class="contact-link"
+                target="_blank"
+                rel = "noopener noreferref"
+                >
+                <p class="contact-title">GitHub</p>
+              </a>
             </div>
           </li>
 
@@ -112,11 +126,20 @@
               <ion-icon name="bar-chart-outline"></ion-icon> 
             </div>
             <div class="contact-info">
-              <p class="contact-title">Tableau Public</p>
-              <a href="https://public.tableau.com/app/profile/felix.manuel.aguila.alonso/" class="contact-link">public.tableau.com/app/profile/felix.manuel.aguila.alonso</a>
+              <a 
+                href="https://public.tableau.com/app/profile/felix.manuel.aguila.alonso/" 
+                class="contact-link"
+                target="_blank"
+                rel = "noopener noreferref"
+                >
+                <p class="contact-title">Tableau Public</p>
+              </a>
             </div>
           </li>
-
+        </ul>
+        
+        <div class="separator"></div>
+        <ul class="contacts-list">
           <!-- CONTACT INFO: Location -->
           <li class="contact-item">
             <div class="icon-box">
@@ -127,11 +150,10 @@
               <address>Florianopolis, SC, Brazil</address>
             </div>
           </li>
-
         </ul>
 
         <div class="separator"></div>
-
+      
       </div>
 
     </aside>
@@ -982,6 +1004,8 @@
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
+        
+        <!-- DEPRECATED FOR NOW
 
         <section class="mapbox" data-mapbox>
           <figure>
@@ -990,20 +1014,55 @@
               width="400" height="300" loading="lazy"></iframe>
           </figure>
         </section>
-
+        -->
         <section class="contact-form">
+          <section class="about-text">
+            <p>
+              I’d love to hear from you!  
+            </p>
+            <p>
+              Whether you have a question, a project in mind, or just want to say hi,
+              feel free to drop me a message 👋
+            </p>
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form 
+            action="https://formspree.io/f/mvzayzee"
+            class="form" 
+            method = "POST"
+            data-form
+          >
+            <!--Hidden input to prevent spam bots-->
+            <input type="text" name="_gotcha" style="display:none">
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input 
+                type="text" 
+                name="name" 
+                class="form-input" 
+                placeholder="Full name" 
+                required
+                data-form-input
+              >
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input 
+                type="email" 
+                name="email" 
+                class="form-input" 
+                placeholder="Email address" 
+                required
+                data-form-input
+              >
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea 
+              name="message" 
+              class="form-input" 
+              placeholder="Your Message" 
+              required
+              data-form-input
+            ></textarea>
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
