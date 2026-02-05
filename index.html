@@ -568,29 +568,26 @@
       -->
 
       <article class="portfolio" data-page="portfolio">
-
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
         </header>
 
         <section class="projects">
-
           <ul class="filter-list">
-
             <li class="filter-item">
               <button class="active" data-filter-btn>All</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>Dash Apps</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
+              <button data-filter-btn>Data Analysis</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn>Machine Learning</button>
             </li>
 
           </ul>
@@ -599,7 +596,7 @@
 
             <button class="filter-select" data-select>
 
-              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value" data-select-value>Select category</div>
 
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
@@ -614,15 +611,15 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>Dash Apps</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Applications</button>
+                <button data-select-item>Data Analysis</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web development</button>
+                <button data-select-item>Machine Learning</button>
               </li>
 
             </ul>
@@ -630,179 +627,82 @@
           </div>
 
           <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
+            
+            <!-- NBA ANALYTICS PROJECT -->
+             
+            <li class="project-item active" data-filter-item data-category="dash apps">
+              <a href="#" data-project-item>
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                  <img src="./assets/images/nba-analytics-project.jpg" alt="NBA Analytics" loading="lazy" data-project-img>
                 </figure>
+                
+                <h3 class="project-title" data-project-title>NBA Analytics</h3>
+                <p class="project-category">Dash Apps</p>
+                
+                <!-- 🔍 ESTO ES IMPORTANTE: Información oculta que se mostrará en el modal -->
+                <div class="project-details" data-project-details style="display: none;">
+                  <p>
+                    This project was born out of a personal passion for basketball — and especially for the Philadelphia 76ers. 
+                    I wanted a tool that would allow me to explore team and player performance in a visual, interactive way, 
+                    beyond traditional box scores.
+                  </p>
+                  
+                  <p>
+                    I built an end-to-end analytics application in <strong>Python</strong> using <strong>Dash</strong> and <strong>Plotly</strong>,
+                    with a clean and responsive UI. The app allows users to explore performance across seasons and metrics.
+                    It’s an ongoing project that I plan to keep improving over time.
+                  </p>
+                  
+                  <p>
+                    Data is sourced from the public <strong>nba_api</strong> (a non-official but widely used, community-maintained API).
+                    The data is extracted, transformed, and stored in <strong>Google BigQuery</strong>, and refreshed daily using
+                    <strong>Google Cloud Functions</strong> and <strong>Cloud Scheduler</strong>.
+                  </p>
 
-                <h3 class="project-title">Finance</h3>
+                  <p>
+                    The dashboard queries BigQuery directly using <strong>SQL</strong> for fast and flexible access.
+                    It is deployed on <strong>Render</strong>. Since it runs on the free tier, the app may take a minute to wake up on first load.
+                  </p>
 
-                <p class="project-category">Web development</p>
-
+                  <p><strong>Links</strong></p>
+                  <ul>
+                    <li>
+                      <a href="https://nba-analytics.onrender.com/" target="_blank" rel="noopener noreferrer">
+                        Live dashboard
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/FelitoAguila/nba-analytics" target="_blank" rel="noopener noreferrer">
+                        Source code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <!-- OTHER PROJECTS -->
+          <!--   <li class="project-item  active" data-filter-item data-category="web development">
               <a href="#">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
                   <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">Orizon</h3>
-
                 <p class="project-category">Web development</p>
-
               </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
+            </li> -->
+        
           </ul>
-
         </section>
-
       </article>
-
-
-
-
-
+                        
+        
       <!--
         - #BLOG
       -->
@@ -1079,10 +979,34 @@
 
   </main>
 
-
-
-
-
+  <!-- PROJECT MODAL - Fuera de main para evitar problemas de overflow/stacking -->
+  <div class="modal-container" data-project-modal-container>
+    <!-- Fondo oscuro detrás del modal -->
+    <div class="overlay" data-project-overlay></div>
+        
+    <!-- El modal en sí -->
+    <section class="project-modal">
+      <!-- Botón de cerrar (X) -->
+      <button class="modal-close-btn" data-project-modal-close-btn>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+          
+      <!-- Imagen del proyecto -->
+      <div class="modal-img-wrapper">
+        <figure class="modal-avatar-box">
+          <img src="./assets/images/project-1.jpg" alt="project image" width="80" data-project-modal-img>
+        </figure>
+      </div>
+          
+      <!-- Contenido del modal -->
+      <div class="modal-content">
+        <h4 class="h3 modal-title" data-project-modal-title>Project Title</h4>
+        <div data-project-modal-text>
+          <p>Project description goes here...</p>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <!--
     - custom js link

@@ -55,6 +55,86 @@ overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
+// ============================================
+// PROJECT MODAL FUNCTIONALITY (CORREGIDO CON VALIDACIONES)
+// ============================================
+
+// Variables del modal de proyectos
+const projectList = document.querySelector(".project-list");
+const projectModalContainer = document.querySelector("[data-project-modal-container]");
+const projectModalCloseBtn = document.querySelector("[data-project-modal-close-btn]");
+const projectOverlay = document.querySelector("[data-project-overlay]");
+
+// Variables del contenido del modal (dentro del contenedor del modal de proyectos)
+const projectModalImg = projectModalContainer?.querySelector("[data-project-modal-img]");
+const projectModalTitle = projectModalContainer?.querySelector("[data-project-modal-title]");
+const projectModalText = projectModalContainer?.querySelector("[data-project-modal-text]");
+
+// ✅ VALIDACIÓN: Solo ejecutar si todos los elementos existen
+if (projectList && projectModalContainer && projectModalCloseBtn && projectOverlay && 
+    projectModalImg && projectModalTitle && projectModalText) {
+  
+  // Función para abrir/cerrar el modal de proyectos
+  const projectModalFunc = function () {
+    projectModalContainer.classList.toggle("active");
+    projectOverlay.classList.toggle("active");
+  }
+
+  // Delegación de eventos: un solo listener en la lista de proyectos
+  projectList.addEventListener("click", function (e) {
+    // Usar .project-item (li) para capturar todo el card, incluyendo el div oculto
+    const projectCard = e.target.closest(".project-item");
+    if (!projectCard) return;
+    
+    e.preventDefault();
+    
+    // Obtener la imagen del proyecto
+    const imgElement = projectCard.querySelector("[data-project-img]");
+    if (imgElement) {
+      projectModalImg.src = imgElement.src;
+      projectModalImg.alt = imgElement.alt;
+    }
+    
+    // Obtener el título del proyecto
+    const titleElement = projectCard.querySelector("[data-project-title]");
+    if (titleElement) {
+      projectModalTitle.innerHTML = titleElement.innerHTML;
+    }
+    
+    // Obtener los detalles del proyecto (ocultos en el HTML)
+    const detailsElement = projectCard.querySelector("[data-project-details]");
+    if (detailsElement) {
+      projectModalText.innerHTML = detailsElement.innerHTML;
+    } else {
+      projectModalText.innerHTML = "<p>No hay detalles disponibles para este proyecto.</p>";
+    }
+    
+    // Abrir el modal
+    projectModalFunc();
+  });
+
+  // Cerrar modal al hacer click en el botón de cerrar
+  projectModalCloseBtn.addEventListener("click", projectModalFunc);
+
+  // Cerrar modal al hacer click en el overlay
+  projectOverlay.addEventListener("click", projectModalFunc);
+
+} else {
+  // ⚠️ Mostrar mensaje de error en consola si faltan elementos
+  console.error("❌ PROJECT MODAL ERROR: No se encontraron todos los elementos del modal.");
+  console.log("Elementos encontrados:");
+  console.log("- projectList:", projectList);
+  console.log("- projectModalContainer:", projectModalContainer);
+  console.log("- projectModalCloseBtn:", projectModalCloseBtn);
+  console.log("- projectOverlay:", projectOverlay);
+  console.log("- projectModalImg:", projectModalImg);
+  console.log("- projectModalTitle:", projectModalTitle);
+  console.log("- projectModalText:", projectModalText);
+  console.log("\n💡 SOLUCIÓN: Verifica que el modal y .project-list estén en el HTML con los atributos data-* correctos.");
+}
+
+
+
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
@@ -163,7 +243,7 @@ form.addEventListener("submit", function (event) {
 function showSuccessMessage() {
   const message = document.createElement("p");
   message.className = "form-success";
-  message.textContent = "Thanks for your message! I’ll get back to you soon 🙂";
+  message.textContent = "Thanks for your message! I'll get back to you soon 🙂";
 
   form.appendChild(message);
 }
