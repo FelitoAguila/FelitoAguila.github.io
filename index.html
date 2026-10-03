@@ -185,6 +185,7 @@
     padding: 0.25rem 0.75rem; border-radius: 999px; background: var(--bg-2);
   }
   .links { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .practical { margin: 1.15rem 0 0; font-family: var(--mono); font-size: 0.78rem; color: var(--faint); }
   .btn {
     display: inline-flex; align-items: center; gap: 0.45rem;
     text-decoration: none; color: var(--ink); border: 1px solid var(--line); background: var(--card);
@@ -198,7 +199,7 @@
   .btn.static, .btn.static:hover { cursor: text; transform: none; background: var(--accent-deep); border-color: var(--accent-deep); }
 
   /* Stats strip */
-  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-bottom: 1rem; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-bottom: 1rem; }
   .stat { background: var(--bg-2); padding: 1.2rem 1.25rem; }
   .stat b { display: block; font-family: var(--serif); font-size: 2rem; font-weight: 500; color: var(--accent); line-height: 1.1; }
   .stat span { font-size: 0.85rem; color: var(--muted); }
@@ -339,7 +340,7 @@
     .areas { grid-template-columns: 1fr; }
     .hero { grid-template-columns: 1fr; padding: 2.5rem 0; gap: 1.75rem; }
     .avatar { width: 8rem; height: 8rem; font-size: 2.6rem; }
-    .stats { grid-template-columns: repeat(2, 1fr); }
+    .stats { grid-template-columns: 1fr; }
     .tl { padding-left: 1.6rem; }
     .tl::before { left: 6px; }
     .tl > li { grid-template-columns: 1fr; }
@@ -390,23 +391,23 @@
       <h1>Felix Manuel <em>Aguila Alonso</em></h1>
       <p class="lede">I build the systems that move, shape and serve data: ingestion, transformation, and the data models everything downstream is built on.</p>
       <ul class="facts">
-        <li>Florianopolis, Brazil</li>
         <li>Google Data Analytics certified</li>
         <li>Data Engineer certified</li>
+        <li>Machine Learning Engineer certified</li>
       </ul>
       <div class="links">
         <span class="btn primary static"><svg><use href="#i-mail"/></svg>feloaguila at gmail dot com</span>
         <a class="btn" href="https://www.linkedin.com/in/felix-aguila/" rel="noopener"><svg><use href="#i-in"/></svg>LinkedIn</a>
         <a class="btn" href="https://github.com/FelitoAguila" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a>
       </div>
+      <p class="practical">Argentinian citizen &middot; Based in Florianopolis, Brazil &middot; Fully remote</p>
     </div>
   </div>
 
   <div class="stats">
     <div class="stat"><b>3+</b><span>years in data and analytics</span></div>
     <div class="stat"><b>3</b><span>industry and freelance roles</span></div>
-    <div class="stat"><b>4</b><span>certifications, from DataCamp to Columbia</span></div>
-    <div class="stat"><b>3</b><span>languages: Spanish, English, Portuguese</span></div>
+    <div class="stat"><b>3</b><span>languages: Spanish (native), English (fluent), Portuguese (intermediate)</span></div>
   </div>
   </section>
 
@@ -617,10 +618,6 @@
       <div class="skill">
         <h3>Version control</h3>
         <ul class="chips"><li class="strong">Git</li><li class="strong">GitHub</li><li>CI/CD</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Languages &amp; location</h3>
-        <p>Spanish (native)<br>English (fluent)<br>Portuguese (intermediate)<br>Based in Florianopolis, Brazil &middot; fully remote</p>
       </div>
     </div>
   </section>
