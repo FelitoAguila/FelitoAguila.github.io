@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Felix Aguila | Product Analytics Specialist</title>
+<meta name="description" content="Felix Manuel Aguila Alonso is a product analytics specialist and data engineer based in Florianopolis, Brazil. He builds ETL pipelines, interactive Dash/Plotly dashboards, and machine learning models that turn messy product data into decisions.">
+<meta name="author" content="Felix Manuel Aguila Alonso">
+<meta name="theme-color" content="#0a0b12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b45c4'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='30' fill='%23eef1f8'%3EFA%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://felitoaguila.github.io/">
+<meta property="og:title" content="Felix Aguila | Product Analytics Specialist">
+<meta property="og:description" content="Product analytics specialist and data engineer. ETL pipelines, interactive Dash/Plotly dashboards, SQL, Python, and machine learning.">
+<meta property="og:image" content="https://felitoaguila.github.io/assets/felo-avatar.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Felix Aguila | Product Analytics Specialist">
+<meta name="twitter:description" content="Product analytics specialist and data engineer. ETL pipelines, interactive Dash/Plotly dashboards, SQL, Python, and machine learning.">
+<meta name="twitter:image" content="https://felitoaguila.github.io/assets/felo-avatar.jpg">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Felix Manuel Aguila Alonso",
+  "alternateName": "Felix Aguila",
+  "url": "https://felitoaguila.github.io/",
+  "image": "https://felitoaguila.github.io/assets/felo-avatar.jpg",
+  "jobTitle": "Product Analytics Specialist",
+  "worksFor": { "@type": "Organization", "name": "Rather Labs" },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Florianopolis",
+    "addressRegion": "Santa Catarina",
+    "addressCountry": "BR"
+  },
+  "knowsLanguage": ["es", "en", "pt"],
+  "knowsAbout": [
+    "Python", "SQL", "MQL", "R", "Pandas", "ETL/ELT", "dbt", "Airflow",
+    "Dash", "Plotly", "Data Visualization", "BigQuery", "MongoDB",
+    "Machine Learning", "scikit-learn", "PyTorch", "TensorFlow", "LLM evaluation"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/felix-aguila/",
+    "https://github.com/FelitoAguila",
+    "https://public.tableau.com/app/profile/felix.manuel.aguila.alonso/"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+<style>
+  /* ============================================================
+     THEME TOKENS. Electric blue is the default; light is optional.
+     ============================================================ */
+  :root {
+    --bg: #0a0b12;
+    --bg-2: #11131c;
+    --card: #151824;
+    --ink: #eef1f8;
+    --muted: #a2a8bd;
+    --faint: #6b7288;
+    --line: #232739;
+    --accent: #5b6cff;
+    --accent-2: #93a0ff;
+    --accent-deep: #3b45c4;
+    --accent-ink: #0a0b12;
+    --accent-soft: rgba(91, 108, 255, 0.12);
+    --glow: rgba(59, 69, 196, 0.5);
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --radius: 14px;
+    color-scheme: dark;
+  }
+  :root[data-theme="light"] {
+    --bg: #f7f8fc;
+    --bg-2: #eef0f8;
+    --card: #ffffff;
+    --ink: #0d1020;
+    --muted: #4d5468;
+    --faint: #7d84a0;
+    --line: #dfe3ef;
+    --accent: #4338ca;
+    --accent-2: #3730a3;
+    --accent-deep: #312e81;
+    --accent-ink: #f7f8fc;
+    --accent-soft: rgba(67, 56, 202, 0.08);
+    --glow: rgba(67, 56, 202, 0.16);
+    color-scheme: light;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(60rem 30rem at 85% -10%, var(--glow), transparent 70%),
+      radial-gradient(40rem 25rem at -10% 20%, var(--accent-soft), transparent 70%),
+      var(--bg);
+    background-repeat: no-repeat;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    min-height: 100vh;
+  }
+
+  a { color: var(--accent-2); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; border-radius: 4px; }
+  ::selection { background: var(--accent-deep); color: #fff; }
+
+  .wrap { max-width: 64rem; margin: 0 auto; padding: 0 1.25rem; }
+
+  .skip {
+    position: absolute; left: -9999px; top: 0; z-index: 40;
+    background: var(--accent-deep); color: #fff; padding: 0.6rem 1rem; border-radius: 0 0 10px 0;
+    text-decoration: none; font-size: 0.9rem;
+  }
+  .skip:focus { left: 0; }
+
+  /* ============================================================
+     TOP BAR
+     ============================================================ */
+  .bar {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar .wrap { display: flex; align-items: center; gap: 1rem; min-height: 3.75rem; max-width: 76rem; }
+  .brand {
+    font-family: var(--serif); font-size: 1.25rem; font-weight: 500;
+    color: var(--ink); text-decoration: none; white-space: nowrap;
+  }
+  .brand span { color: var(--accent); font-style: italic; }
+  .nav { display: flex; gap: 0.2rem; margin-left: auto; overflow-x: auto; scrollbar-width: none; font-size: 0.92rem; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a {
+    color: var(--muted); text-decoration: none; white-space: nowrap;
+    padding: 0.35rem 0.6rem; border-radius: 999px; transition: color .2s, background .2s;
+  }
+  .nav a:hover { color: var(--ink); }
+  .nav a.active { color: var(--ink); background: var(--accent-soft); box-shadow: inset 0 0 0 1px var(--accent-deep); }
+  .icon-btn {
+    font: inherit; font-size: 0.85rem; line-height: 1; color: var(--muted);
+    background: none; border: 1px solid var(--line); border-radius: 999px;
+    height: 2.2rem; min-width: 2.2rem; padding: 0 0.7rem; cursor: pointer; flex: none;
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  }
+  .icon-btn:hover { color: var(--accent-2); border-color: var(--accent); }
+  .icon-btn svg { width: 1rem; height: 1rem; }
+
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero { display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: center; padding: 5rem 0 4rem; }
+  .avatar {
+    position: relative; width: 13rem; height: 13rem; border-radius: 50%;
+    background: linear-gradient(145deg, var(--accent-deep), #131a52);
+    color: #eef1f8; display: grid; place-items: center;
+    font-family: var(--serif); font-size: 4.2rem; font-style: italic;
+    box-shadow: 0 0 0 6px var(--bg), 0 0 0 7px var(--line), 0 30px 80px -20px var(--glow);
+  }
+  .avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+  .eyebrow {
+    font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 0.75rem;
+  }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(2.8rem, 7vw, 4.6rem); line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 1rem;
+  }
+  .hero h1 em { color: var(--accent); }
+  .lede { font-family: var(--serif); font-size: 1.35rem; line-height: 1.5; margin: 0 0 1.5rem; max-width: 36rem; color: var(--ink); }
+  .facts { list-style: none; margin: 0 0 1.75rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .facts li {
+    font-size: 0.88rem; color: var(--muted); border: 1px solid var(--line);
+    padding: 0.25rem 0.75rem; border-radius: 999px; background: var(--bg-2);
+  }
+  .links { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    text-decoration: none; color: var(--ink); border: 1px solid var(--line); background: var(--card);
+    padding: 0.5rem 1rem; border-radius: 999px; font-weight: 500; font-size: 0.93rem;
+    transition: border-color .2s, transform .2s, background .2s;
+  }
+  .btn svg { width: 1rem; height: 1rem; }
+  .btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .btn.primary { background: var(--accent-deep); border-color: var(--accent-deep); color: #fff; }
+  .btn.primary:hover { background: var(--accent); border-color: var(--accent); }
+  .btn.static, .btn.static:hover { cursor: text; transform: none; background: var(--accent-deep); border-color: var(--accent-deep); }
+
+  /* Stats strip */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-bottom: 1rem; }
+  .stat { background: var(--bg-2); padding: 1.2rem 1.25rem; }
+  .stat b { display: block; font-family: var(--serif); font-size: 2rem; font-weight: 500; color: var(--accent); line-height: 1.1; }
+  .stat span { font-size: 0.85rem; color: var(--muted); }
+
+  /* ============================================================
+     SECTIONS
+     ============================================================ */
+  main { min-height: calc(100vh - 12rem); }
+  section { padding: 4.5rem 0 1rem; }
+  section#home { padding: 0; }
+  .sec-head { display: flex; align-items: baseline; gap: 1rem; margin: 0 0 2rem; flex-wrap: wrap; }
+  .sec-num { font-family: var(--mono); font-size: 0.85rem; color: var(--accent); }
+  h2 {
+    font-family: var(--serif); font-size: clamp(1.9rem, 4vw, 2.4rem); line-height: 1.15; font-weight: 500;
+    margin: 0; letter-spacing: -0.01em;
+  }
+  .sec-head::after { content: ""; flex: 1; height: 1px; background: var(--line); min-width: 2rem; align-self: center; }
+  h3 { font-size: 1.1rem; line-height: 1.35; font-weight: 600; margin: 0; }
+  p { margin: 0 0 1rem; }
+  .prose { max-width: 44rem; }
+  .prose p { font-family: var(--serif); font-size: 1.15rem; }
+  .prose strong { font-weight: 600; color: var(--ink); }
+  .intro-note { margin-bottom: 2rem; }
+  .intro-note p { margin-bottom: 0; }
+
+  /* Focus areas (About) */
+  .areas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; margin: 1.75rem 0; }
+  .area { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; background: var(--card); }
+  .area h3 { font-size: 0.98rem; color: var(--accent-2); margin-bottom: 0.3rem; }
+  .area p { margin: 0; font-size: 0.92rem; color: var(--muted); }
+
+  /* Cards (featured work / projects) */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 1.1rem; }
+  .card {
+    position: relative; display: flex; flex-direction: column;
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.4rem; transition: border-color .25s, transform .25s, box-shadow .25s;
+  }
+  .card:hover { border-color: var(--accent-deep); transform: translateY(-3px); box-shadow: 0 18px 40px -24px var(--glow); }
+  .card .kicker { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .card h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; margin-bottom: 0.5rem; }
+  .card p { color: var(--muted); font-size: 0.95rem; flex: 1; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; list-style: none; margin: 0.25rem 0 0; padding: 0; }
+  .tags li { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); background: var(--bg-2); border: 1px solid var(--line); padding: 0.1rem 0.5rem; border-radius: 6px; }
+  .card .more { margin-top: 1rem; font-size: 0.9rem; font-weight: 500; }
+
+  /* Filters */
+  .filters { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin: 0 0 2rem; font-size: 0.9rem; }
+  .seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 999px; padding: 0.2rem; background: var(--bg-2); }
+  .seg button {
+    font: inherit; color: var(--muted); background: none; border: 0; cursor: pointer;
+    padding: 0.3rem 0.95rem; border-radius: 999px;
+  }
+  .seg button:hover { color: var(--ink); }
+  .seg button[aria-pressed="true"] { background: var(--accent-deep); color: #fff; }
+  .legend { color: var(--faint); font-size: 0.85rem; }
+
+  /* Timeline */
+  .tl { list-style: none; margin: 0; padding: 0; position: relative; }
+  .tl::before { content: ""; position: absolute; top: 0.6rem; bottom: 1rem; width: 2px; background: linear-gradient(var(--accent-deep), var(--line)); left: calc(9.5rem + 1.25rem - 1px); }
+  .tl > li { display: grid; grid-template-columns: 9.5rem 1fr; column-gap: 2.5rem; position: relative; padding-bottom: 2.25rem; }
+  .tl > li[hidden] { display: none; }
+  .tl > li::after {
+    content: ""; position: absolute; top: 0.45rem; left: calc(9.5rem + 1.25rem - 7px);
+    width: 14px; height: 14px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--bg);
+  }
+  .tl > li[data-type="freelance"]::after { background: var(--bg); border: 2px solid var(--accent); }
+  .when { text-align: right; font-family: var(--mono); font-size: 0.8rem; color: var(--muted); padding-top: 0.25rem; line-height: 1.5; }
+  .org { font-size: 0.93rem; color: var(--accent-2); margin: 0.1rem 0 0.6rem; }
+  .tl p { margin: 0 0 0.6rem; max-width: 40rem; color: var(--muted); }
+  .tl ul.impact { margin: 0 0 0.6rem; padding-left: 1.1rem; color: var(--muted); max-width: 40rem; }
+  .tl ul.impact li::marker { color: var(--accent); }
+
+  /* Publications / certifications list */
+  .pubs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .pubs > li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+  .pubs > li[hidden] { display: none; }
+  .pub-group + .pub-group { margin-top: 2.5rem; }
+  .pub-field { font-family: var(--mono); font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin: 0 0 0.75rem; }
+  .pubs h3 a { color: var(--ink); text-decoration-color: var(--accent-deep); }
+  .pubs h3 a:hover { color: var(--accent-2); text-decoration-color: var(--accent-2); }
+  .pubs .year { font-family: var(--mono); font-size: 0.85rem; color: var(--accent); padding-top: 0.2rem; }
+  .pubs h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
+  .pubs .meta { color: var(--muted); font-size: 0.92rem; margin: 0.2rem 0 0; }
+  .pubs .res { margin-top: 0.6rem; }
+  .pubs .meta i { color: var(--ink); }
+  .badge { display: inline-block; font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.08rem 0.45rem; border-radius: 5px; border: 1px solid var(--accent-deep); color: var(--accent-2); margin-right: 0.4rem; vertical-align: 0.15em; }
+  .res { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .res a { font-family: var(--mono); font-size: 0.75rem; text-decoration: none; color: var(--muted); border: 1px solid var(--line); padding: 0.12rem 0.55rem; border-radius: 6px; }
+  .res a:hover { color: var(--accent-2); border-color: var(--accent); }
+
+  /* Education */
+  .edu { display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 1.1rem; list-style: none; margin: 0; padding: 0; }
+  .edu li { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.3rem; border-top: 3px solid var(--accent-deep); }
+  .edu .when { text-align: left; margin-bottom: 0.4rem; padding: 0; }
+  .edu h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
+  .edu p { margin: 0.4rem 0 0; color: var(--muted); font-size: 0.93rem; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 1.1rem; }
+  .skill { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem 1.3rem; }
+  .skill h3 { font-size: 0.8rem; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.75rem; font-weight: 500; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
+  .chips li { font-size: 0.88rem; padding: 0.2rem 0.7rem; border-radius: 999px; background: var(--accent-soft); color: var(--ink); border: 1px solid transparent; }
+  .chips li.strong { border-color: var(--accent); }
+  .skill p { margin: 0; font-size: 0.93rem; color: var(--muted); }
+
+  /* Contact */
+  .contact {
+    border: 1px solid var(--accent-deep); border-radius: calc(var(--radius) + 6px); padding: 2.5rem;
+    background: radial-gradient(40rem 20rem at 100% 0%, var(--glow), transparent 70%), var(--card);
+  }
+  .contact h2 { margin-bottom: 0.75rem; }
+  .contact p { color: var(--muted); max-width: 36rem; font-family: var(--serif); font-size: 1.15rem; }
+
+  footer { padding: 3rem 0; margin-top: 4rem; border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--faint); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+  footer a { color: var(--muted); }
+
+  /* Reveal on page change */
+  @media (prefers-reduced-motion: no-preference) {
+    main > section.current { animation: page-in .35s ease; }
+    @keyframes page-in { from { opacity: 0.4; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  }
+
+  /* ============================================================
+     SMALL SCREENS
+     ============================================================ */
+  @media (max-width: 64rem) {
+    .bar .wrap { flex-wrap: wrap; padding-top: 0.5rem; padding-bottom: 0.5rem; gap: 0.4rem 0.6rem; }
+    .brand { order: 1; margin-right: auto; }
+    .icon-btn { order: 2; }
+    .nav { order: 3; width: 100%; margin: 0 -0.6rem; }
+    html { scroll-padding-top: 7rem; }
+  }
+  @media (max-width: 48rem) {
+    .areas { grid-template-columns: 1fr; }
+    .hero { grid-template-columns: 1fr; padding: 2.5rem 0; gap: 1.75rem; }
+    .avatar { width: 8rem; height: 8rem; font-size: 2.6rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .tl { padding-left: 1.6rem; }
+    .tl::before { left: 6px; }
+    .tl > li { grid-template-columns: 1fr; }
+    .tl > li::after { left: calc(-1.6rem); }
+    .when { text-align: left; padding-top: 0; margin-bottom: 0.2rem; }
+    .pubs > li { grid-template-columns: 1fr; gap: 0.25rem; }
+    .contact { padding: 1.75rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Inline SVG icons, referenced with <use> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.6 8.65 22 11.2 22 14.5V21h-4v-5.8c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21h-4z"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.26 5.69.42.36.79 1.08.79 2.18v3.23c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+</svg>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#home">Felix <span>Aguila</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="icon-btn" id="theme" type="button" aria-label="Switch between dark and light theme" title="Switch theme"><svg><use href="#i-sun"/></svg></button>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <!-- ========================= HOME ========================= -->
+  <section id="home">
+  <div class="hero">
+    <div class="avatar"><img src="assets/felo-avatar.jpg" alt="Portrait of Felix Aguila" width="640" height="640"></div>
+    <div>
+      <p class="eyebrow">Product Analytics · Data Engineering · ML</p>
+      <h1>Felix <em>Aguila</em></h1>
+      <p class="lede">I build ETL pipelines, interactive dashboards, and machine learning models that turn messy product data into decisions people actually use.</p>
+      <ul class="facts">
+        <li>Florianopolis, Brazil</li>
+        <li>Fully remote, open to relocation</li>
+        <li>Instituto Balseiro, Bariloche</li>
+        <li>Google Data Analytics certified</li>
+      </ul>
+      <div class="links">
+        <span class="btn primary static"><svg><use href="#i-mail"/></svg>feloaguila at gmail dot com</span>
+        <a class="btn" href="https://www.linkedin.com/in/felix-aguila/" rel="noopener"><svg><use href="#i-in"/></svg>LinkedIn</a>
+        <a class="btn" href="https://github.com/FelitoAguila" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a>
+        <a class="btn" href="https://public.tableau.com/app/profile/felix.manuel.aguila.alonso/" rel="noopener"><svg><use href="#i-chart"/></svg>Tableau</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>3+</b><span>years in data and analytics</span></div>
+    <div class="stat"><b>3</b><span>industry and freelance roles</span></div>
+    <div class="stat"><b>4</b><span>certifications, from DataCamp to Columbia</span></div>
+    <div class="stat"><b>3</b><span>languages: Spanish, English, Portuguese</span></div>
+  </div>
+  </section>
+
+  <!-- ========================= ABOUT ========================= -->
+  <section id="about">
+    <div class="sec-head"><span class="sec-num">01</span><h2>About</h2></div>
+
+    <div class="prose">
+      <p>Hi, I&rsquo;m Felix &mdash; a data enthusiast who gets genuinely excited when messy, real-world data starts to make sense and tell a story. I love the full journey: extracting data, cleaning it, finding patterns, building visualizations non-technical people can actually use, and turning insights into decisions.</p>
+      <p>I&rsquo;ve spent the last three years on <strong>product analytics</strong> at Rather Labs, where I design <strong>ETL pipelines</strong> and fully responsive <strong>Dash/Plotly dashboards</strong> to track KPIs and support executive reporting. I also analyze payment flows across <strong>Stripe</strong> and <strong>Mercado Pago</strong> to spot failure patterns, monitor product usage, and design <strong>reactivation workflows</strong> that brought back 40% of churned users.</p>
+      <p>Before that I did end-to-end <strong>machine learning</strong> work at Anyone AI (credit default risk, computer vision, sentiment analysis) and quality assurance for <strong>LLM evaluation</strong> at Scale AI, where I wrote domain-specific evaluation questions and tested and debugged model-generated code. I&rsquo;m at my best when the stack is real: pipelines feeding models feeding something a human uses on Monday morning.</p>
+      <p>I&rsquo;m fully remote, based in Brazil, fluent in English, and open to interesting challenges anywhere. If you&rsquo;re building something data-driven and want someone curious, hands-on, and ready to jump in, I&rsquo;d love to connect.</p>
+      <p>These are the specific areas I&rsquo;ve been working in:</p>
+    </div>
+
+    <div class="areas">
+      <div class="area"><h3>Product analytics</h3><p>Defining KPIs with stakeholders and turning usage and payment data into decisions and reactivation workflows.</p></div>
+      <div class="area"><h3>Data pipelines</h3><p>ELT/ETL design and orchestration with Airbyte, dlt, dbt, Airflow, and Prefect, on BigQuery, PostgreSQL, and DuckDB.</p></div>
+      <div class="area"><h3>Dashboards</h3><p>Interactive, responsive Dash/Plotly apps for KPI tracking and reporting, plus static charts with Matplotlib and Seaborn.</p></div>
+      <div class="area"><h3>Databases</h3><p>SQL and MQL for extracting and analyzing large datasets, dimensional modeling, and warehouse architecture.</p></div>
+      <div class="area"><h3>Machine learning</h3><p>Classical models with scikit-learn and deep learning with PyTorch and TensorFlow for classification, regression, and NLP.</p></div>
+      <div class="area"><h3>LLM quality</h3><p>Designing evaluations and testing model-generated code for correctness, clarity, and usefulness.</p></div>
+    </div>
+  </section>
+
+  <!-- ========================= EXPERIENCE ========================= -->
+  <section id="experience">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Experience</h2></div>
+
+    <div class="filters">
+      <div class="seg" role="group" aria-label="Filter experience">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="industry" aria-pressed="false">Industry</button>
+        <button type="button" data-filter="freelance" aria-pressed="false">Freelance</button>
+      </div>
+      <span class="legend">● full-time &nbsp; ○ freelance / part-time</span>
+    </div>
+
+    <ol class="tl" data-list="experience">
+      <li data-type="industry">
+        <div class="when">2023 &ndash; 2026</div>
+        <div>
+          <h3>Product Analytics Specialist</h3>
+          <div class="org">Rather Labs &middot; Remote</div>
+          <ul class="impact">
+            <li>Designed and implemented ETL data pipelines and a fully responsive interactive dashboard (Plotly/Dash) to track KPIs, visualize key metrics, and enable advanced reporting.</li>
+            <li>Conducted comprehensive data analysis across payment platforms (Stripe and Mercado Pago) and the application database to identify payment failure patterns, understand user behavior and product usage, and monitor errors.</li>
+            <li>Collaborated with project leaders to define strategic KPIs and advanced metrics aligned with business objectives, performance tracking, and executive reporting.</li>
+            <li>Designed and implemented user reactivation workflows that resulted in a 40% reactivation rate.</li>
+          </ul>
+        </div>
+      </li>
+      <li data-type="freelance">
+        <div class="when">Mar 2024 &ndash; Aug 2024</div>
+        <div>
+          <h3>Machine Learning Trainee</h3>
+          <div class="org">Anyone AI &middot; Remote &middot; part-time</div>
+          <ul class="impact">
+            <li>Built predictive models on a dataset of 350,000 records to assess credit default risk for home loan applicants.</li>
+            <li>Developed a computer vision system using convolutional neural networks to classify vehicle brand and model from e-commerce images.</li>
+            <li>Performed sentiment analysis on over 50,000 movie reviews using Word2Vec embeddings and logistic regression.</li>
+            <li>Trained word embeddings and sentiment models to detect positive and negative opinions in product reviews.</li>
+          </ul>
+        </div>
+      </li>
+      <li data-type="freelance">
+        <div class="when">Jan 2023 &ndash; Mar 2024</div>
+        <div>
+          <h3>Quality Assurance</h3>
+          <div class="org">Scale AI &middot; Remote &middot; freelance</div>
+          <ul class="impact">
+            <li>Created domain-specific evaluation questions to train large language models focused on implicit code execution.</li>
+            <li>Evaluated, corrected, and refined AI-generated responses to ensure correctness, clarity, and usefulness.</li>
+            <li>Used Python to test, debug, and validate generated code outputs.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ========================= PROJECTS ========================= -->
+  <section id="projects">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Projects</h2></div>
+
+    <div class="prose intro-note">
+      <p>Two end-to-end projects I took from raw data to something live. More machine learning work lives on <a href="https://github.com/FelitoAguila" rel="noopener">GitHub</a>.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <p class="kicker">Dash apps</p>
+        <h3>NBA Analytics</h3>
+        <p>An interactive basketball analytics app built in Python with Dash and Plotly, born out of a passion for the Philadelphia 76ers. It lets anyone explore team and player performance across seasons and metrics instead of reading static box scores. Data comes from the community-maintained <strong>nba_api</strong>, lands in <strong>BigQuery</strong>, and refreshes daily with Cloud Functions and Cloud Scheduler; the dashboard queries BigQuery directly with SQL. Deployed on Render, so the free tier may take a minute to wake up on first load.</p>
+        <ul class="tags">
+          <li>Python</li><li>Dash</li><li>Plotly</li><li>SQL</li><li>BigQuery</li><li>Cloud Functions</li>
+        </ul>
+        <div class="more res">
+          <a href="https://nba-analytics.onrender.com/" rel="noopener">Live dashboard</a>
+          <a href="https://github.com/FelitoAguila/nba-analytics" rel="noopener">Source code</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <p class="kicker">Data analysis</p>
+        <h3>E-Commerce Data Pipeline</h3>
+        <p>An end-to-end analysis of real Brazilian e-commerce data covering customer behavior, orders, payments, and delivery performance by region. A raw dataset was loaded into <strong>SQLite</strong> as a lightweight warehouse, queried with <strong>SQL</strong> for order trends, customer distribution, and delivery times, then visualized with <strong>Matplotlib</strong>, <strong>Seaborn</strong>, and <strong>Plotly</strong> to combine static and interactive charts that communicate the findings to non-technical readers.</p>
+        <ul class="tags">
+          <li>Python</li><li>SQL</li><li>SQLite</li><li>Matplotlib</li><li>Seaborn</li><li>Plotly</li>
+        </ul>
+        <div class="more res">
+          <a href="https://github.com/FelitoAguila/e-commerce-data-pipeline-project" rel="noopener">Source code</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========================= EDUCATION ========================= -->
+  <section id="education">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Education</h2></div>
+
+    <ul class="edu">
+      <li>
+        <div class="when">2016 &ndash; 2018</div>
+        <h3>Telecommunication Engineering (incomplete)</h3>
+        <p>Instituto Balseiro, Bariloche, Argentina<br>Admitted through a highly competitive entrance exam to one of the most selective engineering programs in Latin America, with roughly ten students admitted per year. Foundational years with strong focus on advanced mathematics, statistics, probability, physics, and programming &mdash; the basis of my analytical thinking and my move into data.</p>
+      </li>
+      <li>
+        <div class="when">2012 &ndash; 2016</div>
+        <h3>Telecommunication Engineering</h3>
+        <p>Universidad Central de Las Villas<br>GPA 4.7 / 5.0<br>The technical foundation that motivated me to move into more demanding academic environments.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ========================= CERTIFICATIONS ========================= -->
+  <section id="certifications">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Certifications</h2></div>
+
+    <div class="pub-group">
+      <h3 class="pub-field">Data &amp; analytics</h3>
+      <ul class="pubs">
+        <li>
+          <div class="year">Jun 2026</div>
+          <div>
+            <h3>Associate Data Engineer</h3>
+            <p class="meta"><span class="badge">DataCamp</span>Warehouse design, dimensional modeling, database architecture, and advanced SQL.</p>
+          </div>
+        </li>
+        <li>
+          <div class="year">Jan 2026</div>
+          <div>
+            <h3>Google Data Analytics Professional Certificate</h3>
+            <p class="meta"><span class="badge">Google</span>Data cleaning, visualization, SQL, and R, with a focus on business-focused analysis.</p>
+            <div class="res"><a href="https://www.credly.com/go/n9IP9Z3k" rel="noopener">Credly badge</a></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="pub-group">
+      <h3 class="pub-field">Machine learning</h3>
+      <ul class="pubs">
+        <li>
+          <div class="year">Jan 2026</div>
+          <div>
+            <h3>Machine Learning I</h3>
+            <p class="meta"><span class="badge">Columbia+</span>Core machine learning concepts and algorithms, with attention to the math behind them.</p>
+            <div class="res"><a href="https://badges.plus.columbia.edu/56f02aa7-5112-44cb-8b28-afed69d6d3c3#acc.F2U5I4mn" rel="noopener">Columbia badge</a></div>
+          </div>
+        </li>
+        <li>
+          <div class="year">Aug 2024</div>
+          <div>
+            <h3>Machine Learning Engineer</h3>
+            <p class="meta"><span class="badge">Anyone AI</span>Hands-on, production-oriented machine learning: supervised and unsupervised learning, evaluation, and practical ML applications.</p>
+            <div class="res"><a href="https://21331110.fs1.hubspotusercontent-na1.net/hubfs/21331110/Certificates%20AY24-01/PDF/AY24-01%20-%20Certificate%20_%20Felix%20Manuel%20Aguila%20Alonso.pdf" rel="noopener">Certificate PDF</a></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================= SKILLS ========================= -->
+  <section id="skills">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Skills</h2></div>
+
+    <div class="skills">
+      <div class="skill">
+        <h3>Programming &amp; query</h3>
+        <ul class="chips"><li class="strong">Python</li><li class="strong">SQL</li><li class="strong">R</li><li>C</li><li>MQL</li><li>Bash</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Analysis &amp; visualization</h3>
+        <ul class="chips"><li class="strong">Pandas</li><li class="strong">Plotly</li><li class="strong">Dash</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>R Markdown</li><li>Tableau</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Databases &amp; warehouses</h3>
+        <ul class="chips"><li class="strong">BigQuery</li><li class="strong">PostgreSQL</li><li>MongoDB</li><li>MySQL</li><li>DuckDB</li><li>dbt</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Machine learning</h3>
+        <ul class="chips"><li class="strong">scikit-learn</li><li class="strong">PyTorch</li><li>TensorFlow</li><li>Keras</li><li>OpenAI</li><li>LangChain</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Data engineering</h3>
+        <ul class="chips"><li class="strong">Airbyte</li><li class="strong">dlt</li><li>Airflow</li><li>Prefect</li><li>ETL/ELT pipelines</li><li>Docker</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Version control</h3>
+        <ul class="chips"><li class="strong">Git</li><li class="strong">GitHub</li><li>CI/CD</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Languages &amp; location</h3>
+        <p>Spanish (native)<br>English (fluent)<br>Portuguese (intermediate)<br>Based in Florianopolis, Brazil &middot; fully remote</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= CONTACT ========================= -->
+  <section id="contact">
+    <div class="contact">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Let&rsquo;s work together</h2>
+      <p>Open to product analytics, data engineering, and applied ML roles &mdash; remote or on-site.<br>Email and LinkedIn are the best ways to reach me.</p>
+      <div class="links">
+        <a class="btn primary js-mail" href="#contact" data-u="feloaguila" data-d="gmail.com"><svg><use href="#i-mail"/></svg>feloaguila at gmail dot com</a>
+        <a class="btn" href="https://www.linkedin.com/in/felix-aguila/" rel="noopener"><svg><use href="#i-in"/></svg>LinkedIn</a>
+        <a class="btn" href="https://github.com/FelitoAguila" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Felix Aguila</span>
+    <span>Florianopolis, Brazil &middot; <a href="#home">Home</a></span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+    function load(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Email: the address is only assembled on click, so it never appears in the HTML
+    document.querySelectorAll(".js-mail").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = "mailto:" + a.getAttribute("data-u") + "@" + a.getAttribute("data-d");
+      });
+    });
+
+    // Theme (electric blue by default)
+    if (load("theme") === "light") root.setAttribute("data-theme", "light");
+    document.getElementById("theme").addEventListener("click", function () {
+      var light = root.getAttribute("data-theme") === "light";
+      if (light) root.removeAttribute("data-theme"); else root.setAttribute("data-theme", "light");
+      store("theme", light ? "dark" : "light");
+    });
+
+    // Filters (experience)
+    document.querySelectorAll(".filters .seg").forEach(function (seg) {
+      var section = seg.closest("section");
+      var items = section.querySelectorAll("[data-list] > li");
+      var buttons = seg.querySelectorAll("button");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var f = btn.getAttribute("data-filter");
+          buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+          items.forEach(function (li) { li.hidden = !(f === "all" || li.getAttribute("data-type") === f); });
+        });
+      });
+    });
+
+    // Pages: show one section at a time, chosen from the top bar. Home is the default.
+    var pages = document.querySelectorAll("main > section[id]");
+    var navLinks = document.querySelectorAll(".nav a");
+    function isPage(id) {
+      var el = id && document.getElementById(id);
+      return !!el && el.parentNode.tagName === "MAIN";
+    }
+    function show(id) {
+      if (!isPage(id)) id = "home";
+      pages.forEach(function (sec) {
+        var on = sec.id === id;
+        sec.hidden = !on;
+        sec.classList.toggle("current", on);
+      });
+      navLinks.forEach(function (a) {
+        var on = a.getAttribute("href") === "#" + id;
+        a.classList.toggle("active", on);
+        if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+        if (on && a.scrollIntoView) a.scrollIntoView({ block: "nearest", inline: "nearest" });
+      });
+      window.scrollTo(0, 0);
+    }
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (!a) return;
+      var id = a.getAttribute("href").slice(1);
+      if (!isPage(id)) return;
+      e.preventDefault();
+      show(id);
+      try { history.pushState(null, "", "#" + id); } catch (err) {}
+    });
+    function fromHash() { show(location.hash.slice(1)); }
+    window.addEventListener("popstate", fromHash);
+    window.addEventListener("hashchange", fromHash);
+    fromHash();
+  })();
+</script>
+</body>
+</html>
