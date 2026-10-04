@@ -39,7 +39,8 @@
   "knowsLanguage": ["es", "en", "pt"],
   "knowsAbout": [
     "Python", "SQL", "MQL", "R", "Pandas", "ETL/ELT", "dbt", "Airflow",
-    "Dash", "Plotly", "Data Visualization", "BigQuery", "MongoDB",
+    "Dash", "Plotly", "Data Visualization", "Google Cloud", "BigQuery", "MongoDB",
+    "Google Cloud Functions", "Airbyte", "Prefect", "DuckDB", "PostgreSQL", "Docker", "OpenAI", "LangChain",
     "Machine Learning", "scikit-learn", "PyTorch", "TensorFlow", "LLM evaluation"
   ],
   "sameAs": [
@@ -275,13 +276,11 @@
   .tl ul.impact li::marker { color: var(--accent); }
 
   /* Publications / certifications list */
-  .pubs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-  .pubs > li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
-  .pubs > li[hidden] { display: none; }
+  .pubs { list-style: none; margin: 0; padding: 0; }
+  .pubs > li { display: grid; grid-template-columns: 6.5rem 1fr; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+  .pubs > li:last-child { border-bottom: 0; padding-bottom: 0; }
   .pub-group + .pub-group { margin-top: 2.5rem; }
   .pub-field { font-family: var(--mono); font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin: 0 0 0.75rem; }
-  .pubs h3 a { color: var(--ink); text-decoration-color: var(--accent-deep); }
-  .pubs h3 a:hover { color: var(--accent-2); text-decoration-color: var(--accent-2); }
   .pubs .year { font-family: var(--mono); font-size: 0.85rem; color: var(--accent); padding-top: 0.2rem; }
   .pubs h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
   .pubs .meta { color: var(--muted); font-size: 0.92rem; margin: 0.2rem 0 0; }
@@ -293,11 +292,12 @@
   .res a:hover { color: var(--accent-2); border-color: var(--accent); }
 
   /* Education */
-  .edu { display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 1.1rem; list-style: none; margin: 0; padding: 0; }
-  .edu li { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.3rem; border-top: 3px solid var(--accent-deep); }
-  .edu .when { text-align: left; margin-bottom: 0.4rem; padding: 0; }
-  .edu h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
-  .edu p { margin: 0.4rem 0 0; color: var(--muted); font-size: 0.93rem; }
+  .certs { display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 1.1rem; }
+  .cert { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.3rem; border-top: 3px solid var(--accent-deep); }
+  .certs .when { text-align: left; margin-bottom: 0.4rem; padding: 0; }
+  .certs h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
+  .certs .meta { margin: 0.4rem 0 0; color: var(--muted); font-size: 0.93rem; }
+  .certs .res { margin-top: 0.7rem; }
 
   /* Skills */
   .skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 1.1rem; }
@@ -372,10 +372,10 @@
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
       <a href="#education">Education</a>
       <a href="#certifications">Certifications</a>
       <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="icon-btn" id="theme" type="button" aria-label="Switch between dark and light theme" title="Switch theme"><svg><use href="#i-sun"/></svg></button>
@@ -420,20 +420,18 @@
     <div class="sec-head"><span class="sec-num">01</span><h2>About</h2></div>
 
     <div class="prose">
-      <p>Hi, I&rsquo;m Felix &mdash; a data enthusiast who gets genuinely excited when messy, real-world data starts to make sense and tell a story. I love the full journey: extracting data, cleaning it, finding patterns, building visualizations non-technical people can actually use, and turning insights into decisions.</p>
-      <p>I&rsquo;ve spent the last three years on <strong>product analytics</strong> at Rather Labs, where I design <strong>ETL pipelines</strong> and fully responsive <strong>Dash/Plotly dashboards</strong> to track KPIs and support executive reporting. I also analyze payment flows across <strong>Stripe</strong> and <strong>Mercado Pago</strong> to spot failure patterns, monitor product usage, and design <strong>reactivation workflows</strong> that brought back 40% of churned users.</p>
-      <p>Before that I did end-to-end <strong>machine learning</strong> work at Anyone AI (credit default risk, computer vision, sentiment analysis) and quality assurance for <strong>LLM evaluation</strong> at Scale AI, where I wrote domain-specific evaluation questions and tested and debugged model-generated code. I&rsquo;m at my best when the stack is real: pipelines feeding models feeding something a human uses on Monday morning.</p>
-      <p>I&rsquo;m fully remote, based in Brazil, fluent in English, and open to interesting challenges anywhere. If you&rsquo;re building something data-driven and want someone curious, hands-on, and ready to jump in, I&rsquo;d love to connect.</p>
-      <p>These are the specific areas I&rsquo;ve been working in:</p>
+      <p>I&rsquo;m a data engineer who works the full path: raw data in, decisions out. Three years of product analytics at Rather Labs, before that machine learning at Anyone AI and LLM evaluation at Scale AI.</p>
+      <p>I&rsquo;m at my best when the stack is real &mdash; pipelines feeding models feeding something a human uses on Monday morning. That most recently meant reactivation workflows that brought back 40% of churned users.</p>
+      <p>If you&rsquo;re building something data-driven and want someone curious and hands-on, I&rsquo;d love to connect.</p>
     </div>
 
     <div class="areas">
       <div class="area"><h3>Product analytics</h3><p>Defining KPIs with stakeholders and turning usage and payment data into decisions and reactivation workflows.</p></div>
-      <div class="area"><h3>Data pipelines</h3><p>ELT/ETL design and orchestration with Airbyte, dlt, dbt, Airflow, and Prefect, on BigQuery, PostgreSQL, and DuckDB.</p></div>
-      <div class="area"><h3>Dashboards</h3><p>Interactive, responsive Dash/Plotly apps for KPI tracking and reporting, plus static charts with Matplotlib and Seaborn.</p></div>
-      <div class="area"><h3>Databases</h3><p>SQL and MQL for extracting and analyzing large datasets, dimensional modeling, and warehouse architecture.</p></div>
-      <div class="area"><h3>Machine learning</h3><p>Classical models with scikit-learn and deep learning with PyTorch and TensorFlow for classification, regression, and NLP.</p></div>
-      <div class="area"><h3>LLM quality</h3><p>Designing evaluations and testing model-generated code for correctness, clarity, and usefulness.</p></div>
+      <div class="area"><h3>Data pipelines</h3><p>Designing and orchestrating ELT/ETL pipelines that keep warehouse models fresh on a schedule, and cheap enough to run every day.</p></div>
+      <div class="area"><h3>Dashboards &amp; reporting</h3><p>Building interactive dashboards people actually open: KPI tracking, executive reporting, and charts written for readers who don&rsquo;t work with data.</p></div>
+      <div class="area"><h3>Data modeling</h3><p>Dimensional modeling and warehouse design &mdash; schema decisions that keep downstream queries fast and trustworthy as the data grows.</p></div>
+      <div class="area"><h3>Applied ML</h3><p>Classification, regression, and NLP in production &mdash; from a credit default model to a computer vision pipeline, evaluated rather than just trained.</p></div>
+      <div class="area"><h3>LLM evaluation</h3><p>Designing evaluations and testing model-generated code for correctness, clarity, and usefulness before it reaches a user.</p></div>
     </div>
   </section>
 
@@ -492,9 +490,112 @@
     </ol>
   </section>
 
+  <!-- ========================= EDUCATION ========================= -->
+  <section id="education">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Education</h2></div>
+
+    <ul class="pubs">
+      <li>
+        <div class="year">2016 &ndash; 2018</div>
+        <div>
+          <h3>Telecommunication Engineering (incomplete)</h3>
+          <p class="meta"><i>Instituto Balseiro</i> &middot; Bariloche, Argentina</p>
+          <p class="meta">Successfully admitted through a highly competitive entrance exam to one of the most selective engineering programs in Latin America (approximately 10 students admitted per year). Completed the core foundational years with strong focus on advanced mathematics, statistics, probability, physics, programming and analytical thinking.</p>
+        </div>
+      </li>
+      <li>
+        <div class="year">2012 &ndash; 2016</div>
+        <div>
+          <h3>Telecommunication Engineering</h3>
+          <p class="meta"><i>Universidad Central de Las Villas</i> &middot; Santa Clara, Cuba</p>
+          <p class="meta">I began my university studies in engineering and finished with a GPA of 4.7 / 5.0. I then prepared for the entrance exam to Instituto Balseiro, which took me to Argentina.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ========================= CERTIFICATIONS ========================= -->
+  <section id="certifications">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Certifications</h2></div>
+
+    <div class="pub-group">
+      <h3 class="pub-field">Data &amp; analytics</h3>
+      <div class="certs">
+        <div class="cert">
+          <div class="when">Aug 2026</div>
+          <h3>Data Engineer</h3>
+          <p class="meta"><span class="badge">DataCamp</span>Validated proficiency in building and maintaining scalable data pipelines, working with SQL and Python for data processing, and applying data engineering best practices in real-world scenarios.</p>
+          <div class="res"><a href="https://www.datacamp.com/certificate/DE0019049545897" rel="noopener">DataCamp certificate</a></div>
+        </div>
+        <div class="cert">
+          <div class="when">Jun 2026</div>
+          <h3>Associate Data Engineer</h3>
+          <p class="meta"><span class="badge">DataCamp</span>Warehouse design, dimensional modeling, database architecture, and advanced SQL.</p>
+          <div class="res"><a href="https://www.datacamp.com/certificate/DEA0011502658790" rel="noopener">DataCamp certificate</a></div>
+        </div>
+        <div class="cert">
+          <div class="when">Jan 2026</div>
+          <h3>Google Data Analytics Professional Certificate</h3>
+          <p class="meta"><span class="badge">Google</span>Data cleaning, visualization, SQL, and R, with a focus on business-focused analysis.</p>
+          <div class="res"><a href="https://www.credly.com/go/n9IP9Z3k" rel="noopener">Credly badge</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-group">
+      <h3 class="pub-field">Machine learning</h3>
+      <div class="certs">
+        <div class="cert">
+          <div class="when">Jan 2026</div>
+          <h3>Machine Learning I</h3>
+          <p class="meta"><span class="badge">Columbia+</span>Core machine learning concepts and algorithms, with attention to the math behind them.</p>
+          <div class="res"><a href="https://badges.plus.columbia.edu/56f02aa7-5112-44cb-8b28-afed69d6d3c3#acc.F2U5I4mn" rel="noopener">Columbia badge</a></div>
+        </div>
+        <div class="cert">
+          <div class="when">Aug 2024</div>
+          <h3>Machine Learning Engineer</h3>
+          <p class="meta"><span class="badge">Anyone AI</span>Hands-on, production-oriented machine learning: supervised and unsupervised learning, evaluation, and practical ML applications.</p>
+          <div class="res"><a href="https://21331110.fs1.hubspotusercontent-na1.net/hubfs/21331110/Certificates%20AY24-01/PDF/AY24-01%20-%20Certificate%20_%20Felix%20Manuel%20Aguila%20Alonso.pdf" rel="noopener">Certificate PDF</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= SKILLS ========================= -->
+  <section id="skills">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Skills</h2></div>
+
+    <div class="skills">
+      <div class="skill">
+        <h3>Programming &amp; query</h3>
+        <ul class="chips"><li class="strong">Python</li><li class="strong">SQL</li><li class="strong">R</li><li>C</li><li>MQL</li><li>Bash</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Analysis &amp; visualization</h3>
+        <ul class="chips"><li class="strong">Pandas</li><li class="strong">Plotly</li><li class="strong">Dash</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>R Markdown</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Databases &amp; warehouses</h3>
+        <ul class="chips"><li class="strong">BigQuery</li><li class="strong">PostgreSQL</li><li class="strong">DuckDB</li><li class="strong">MongoDB</li><li>MySQL</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Machine learning</h3>
+        <ul class="chips"><li class="strong">scikit-learn</li><li>TensorFlow</li><li>Keras</li><li>PyTorch</li><li>OpenAI</li><li>LangChain</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Data engineering</h3>
+        <ul class="chips"><li class="strong">Airbyte</li><li class="strong">dlt</li><li class="strong">Google Cloud</li><li>dbt</li><li>Airflow</li><li>Prefect</li><li>ETL/ELT pipelines</li><li>Docker</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Version control</h3>
+        <ul class="chips"><li class="strong">Git</li><li class="strong">GitHub</li><li>CI/CD</li></ul>
+      </div>
+    </div>
+  </section>
+
   <!-- ========================= PROJECTS ========================= -->
   <section id="projects">
-    <div class="sec-head"><span class="sec-num">03</span><h2>Projects</h2></div>
+    <div class="sec-head"><span class="sec-num">06</span><h2>Projects</h2></div>
 
     <div class="prose intro-note">
       <p>Two end-to-end projects I took from raw data to something live. More machine learning work lives on <a href="https://github.com/FelitoAguila" rel="noopener">GitHub</a>.</p>
@@ -525,104 +626,6 @@
           <a href="https://github.com/FelitoAguila/e-commerce-data-pipeline-project" rel="noopener">Source code</a>
         </div>
       </article>
-    </div>
-  </section>
-
-  <!-- ========================= EDUCATION ========================= -->
-  <section id="education">
-    <div class="sec-head"><span class="sec-num">04</span><h2>Education</h2></div>
-
-    <ul class="edu">
-      <li>
-        <div class="when">2016 &ndash; 2018</div>
-        <h3>Telecommunication Engineering (incomplete)</h3>
-        <p>Instituto Balseiro, Bariloche, Argentina<br>Admitted through a highly competitive entrance exam to one of the most selective engineering programs in Latin America, with roughly ten students admitted per year. Foundational years with strong focus on advanced mathematics, statistics, probability, physics, and programming &mdash; the basis of my analytical thinking and my move into data.</p>
-      </li>
-      <li>
-        <div class="when">2012 &ndash; 2016</div>
-        <h3>Telecommunication Engineering</h3>
-        <p>Universidad Central de Las Villas<br>GPA 4.7 / 5.0<br>The technical foundation that motivated me to move into more demanding academic environments.</p>
-      </li>
-    </ul>
-  </section>
-
-  <!-- ========================= CERTIFICATIONS ========================= -->
-  <section id="certifications">
-    <div class="sec-head"><span class="sec-num">05</span><h2>Certifications</h2></div>
-
-    <div class="pub-group">
-      <h3 class="pub-field">Data &amp; analytics</h3>
-      <ul class="pubs">
-        <li>
-          <div class="year">Jun 2026</div>
-          <div>
-            <h3>Associate Data Engineer</h3>
-            <p class="meta"><span class="badge">DataCamp</span>Warehouse design, dimensional modeling, database architecture, and advanced SQL.</p>
-          </div>
-        </li>
-        <li>
-          <div class="year">Jan 2026</div>
-          <div>
-            <h3>Google Data Analytics Professional Certificate</h3>
-            <p class="meta"><span class="badge">Google</span>Data cleaning, visualization, SQL, and R, with a focus on business-focused analysis.</p>
-            <div class="res"><a href="https://www.credly.com/go/n9IP9Z3k" rel="noopener">Credly badge</a></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="pub-group">
-      <h3 class="pub-field">Machine learning</h3>
-      <ul class="pubs">
-        <li>
-          <div class="year">Jan 2026</div>
-          <div>
-            <h3>Machine Learning I</h3>
-            <p class="meta"><span class="badge">Columbia+</span>Core machine learning concepts and algorithms, with attention to the math behind them.</p>
-            <div class="res"><a href="https://badges.plus.columbia.edu/56f02aa7-5112-44cb-8b28-afed69d6d3c3#acc.F2U5I4mn" rel="noopener">Columbia badge</a></div>
-          </div>
-        </li>
-        <li>
-          <div class="year">Aug 2024</div>
-          <div>
-            <h3>Machine Learning Engineer</h3>
-            <p class="meta"><span class="badge">Anyone AI</span>Hands-on, production-oriented machine learning: supervised and unsupervised learning, evaluation, and practical ML applications.</p>
-            <div class="res"><a href="https://21331110.fs1.hubspotusercontent-na1.net/hubfs/21331110/Certificates%20AY24-01/PDF/AY24-01%20-%20Certificate%20_%20Felix%20Manuel%20Aguila%20Alonso.pdf" rel="noopener">Certificate PDF</a></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ========================= SKILLS ========================= -->
-  <section id="skills">
-    <div class="sec-head"><span class="sec-num">06</span><h2>Skills</h2></div>
-
-    <div class="skills">
-      <div class="skill">
-        <h3>Programming &amp; query</h3>
-        <ul class="chips"><li class="strong">Python</li><li class="strong">SQL</li><li class="strong">R</li><li>C</li><li>MQL</li><li>Bash</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Analysis &amp; visualization</h3>
-        <ul class="chips"><li class="strong">Pandas</li><li class="strong">Plotly</li><li class="strong">Dash</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>R Markdown</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Databases &amp; warehouses</h3>
-        <ul class="chips"><li class="strong">BigQuery</li><li class="strong">PostgreSQL</li><li>MongoDB</li><li>MySQL</li><li>DuckDB</li><li>dbt</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Machine learning</h3>
-        <ul class="chips"><li class="strong">scikit-learn</li><li class="strong">PyTorch</li><li>TensorFlow</li><li>Keras</li><li>OpenAI</li><li>LangChain</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Data engineering</h3>
-        <ul class="chips"><li class="strong">Airbyte</li><li class="strong">dlt</li><li>Airflow</li><li>Prefect</li><li>ETL/ELT pipelines</li><li>Docker</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Version control</h3>
-        <ul class="chips"><li class="strong">Git</li><li class="strong">GitHub</li><li>CI/CD</li></ul>
-      </div>
     </div>
   </section>
 
