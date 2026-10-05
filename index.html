@@ -243,7 +243,7 @@
   .card:hover { border-color: var(--accent-deep); transform: translateY(-3px); box-shadow: 0 18px 40px -24px var(--glow); }
   .card .kicker { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
   .card h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; margin-bottom: 0.5rem; }
-  .card p { color: var(--muted); font-size: 0.95rem; flex: 1; }
+  .card p:not(.kicker) { color: var(--muted); font-size: 0.95rem; flex: 1; }
   .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; list-style: none; margin: 0.25rem 0 0; padding: 0; }
   .tags li { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); background: var(--bg-2); border: 1px solid var(--line); padding: 0.1rem 0.5rem; border-radius: 6px; }
   .card .more { margin-top: 1rem; font-size: 0.9rem; font-weight: 500; }
@@ -619,14 +619,14 @@
       </article>
 
       <article class="card">
-        <p class="kicker">Data analysis</p>
-        <h3>E-Commerce Data Pipeline</h3>
-        <p>An end-to-end analysis of real Brazilian e-commerce data covering customer behavior, orders, payments, and delivery performance by region. A raw dataset was loaded into <strong>SQLite</strong> as a lightweight warehouse, queried with <strong>SQL</strong> for order trends, customer distribution, and delivery times, then visualized with <strong>Matplotlib</strong>, <strong>Seaborn</strong>, and <strong>Plotly</strong> to combine static and interactive charts that communicate the findings to non-technical readers.</p>
+        <p class="kicker">Data Engineering & Analytics</p>
+        <h3>E-Commerce Analytics Platform</h3>
+        <p>An end-to-end e-commerce analytics platform built around the public <strong>Olist</strong> dataset. ~100k real Brazilian orders are seeded into <strong>PostgreSQL</strong>, then kept alive by a simulator that generates new orders, status transitions, and reviews with realistic distributions and deliberate data-quality defects. <strong>dlt</strong> incrementally pulls changes using an <code>updated_at</code> watermark into a warehouse bronze layer; <strong>dbt</strong> builds a gold star schema from it, along with an SCD Type 2 snapshot of the order-status timeline and 73 data tests. <strong>Prefect</strong> runs the pipeline daily, and a <strong>Streamlit</strong> dashboard reads from the gold layer in read-only mode.</p>
         <ul class="tags">
-          <li>Python</li><li>SQL</li><li>SQLite</li><li>Matplotlib</li><li>Seaborn</li><li>Plotly</li>
+          <li>Python</li><li>SQL</li><li>PostgreSQL</li><li>dlt</li><li>dbt</li><li>DuckDB</li><li>Prefect</li><li>Streamlit</li><li>Plotly</li><li>Docker</li><li>BigQuery</li>
         </ul>
         <div class="more res">
-          <a href="https://github.com/FelitoAguila/e-commerce-data-pipeline-project" rel="noopener">Source code</a>
+          <a href="https://github.com/FelitoAguila/ecomerce-analytics-platform" rel="noopener">Source code</a>
         </div>
       </article>
     </div>
